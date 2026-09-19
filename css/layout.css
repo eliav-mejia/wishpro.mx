@@ -1,0 +1,135 @@
+/* ==========================================================================
+   wishpro.mx — layout.css
+   Mobile first. Loaded after Tailwind, so it only holds what utilities
+   don't cover: tokens, wallpaper, base type and small behaviors.
+   ========================================================================== */
+
+:root {
+  /* Palette: white and grey only */
+  --white: #ffffff;
+  --grey-50: #fafafa;
+  --grey-100: #f3f3f3;
+  --grey-200: #e5e5e5;
+  --grey-400: #a3a3a3;
+  --grey-600: #525252;
+  --grey-900: #171717;
+
+  /* Swap this to use your own photo, e.g. url("../assets/wallpaper.jpg") */
+  --wallpaper: url("../assets/wallpaper.svg");
+
+  --header-h: 64px;
+}
+
+/* Base ------------------------------------------------------------------- */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-h);
+}
+
+body {
+  font-family: "Hanken Grotesk", ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--white);
+  color: var(--grey-900);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Keep body copy at a comfortable line length */
+.measure {
+  max-width: 62ch;
+}
+
+/* Header ----------------------------------------------------------------- */
+
+.site-header {
+  min-height: var(--header-h);
+}
+
+.nav-link {
+  display: block;
+  padding: 0.75rem 0;
+  color: var(--grey-600);
+  transition: color 0.15s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+  color: var(--grey-900);
+}
+
+@media (min-width: 768px) {
+  .nav-link {
+    padding: 0.25rem 0;
+  }
+}
+
+/* Wallpaper hero --------------------------------------------------------- */
+
+.hero {
+  background-color: var(--grey-100);
+  background-image: var(--wallpaper);
+  background-size: cover;
+  background-position: 70% center;
+  background-repeat: no-repeat;
+  min-height: calc(100svh - var(--header-h));
+}
+
+@media (min-width: 768px) {
+  .hero {
+    background-position: center;
+  }
+}
+
+/* Buttons ---------------------------------------------------------------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: background-color 0.15s ease, color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.btn-solid {
+  background: var(--grey-900);
+  color: var(--white);
+  border: 1px solid var(--grey-900);
+}
+
+.btn-solid:hover {
+  background: var(--grey-600);
+  border-color: var(--grey-600);
+}
+
+.btn-line {
+  background: transparent;
+  color: var(--grey-900);
+  border: 1px solid var(--grey-400);
+}
+
+.btn-line:hover {
+  background: var(--white);
+  border-color: var(--grey-900);
+}
+
+/* Accessibility ---------------------------------------------------------- */
+
+:focus-visible {
+  outline: 2px solid var(--grey-900);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition: none !important;
+  }
+}
