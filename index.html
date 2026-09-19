@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wishpro</title>
+  <meta name="description" content="Wishpro: una página simple, clara y rápida. Cuéntanos qué necesitas.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="canonical" href="https://wishpro.mx/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Wishpro">
+  <meta property="og:description" content="Una página simple, clara y rápida.">
+  <meta property="og:url" content="https://wishpro.mx/">
+
+  <!-- Favicon (inline, no extra file) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23171717'/%3E%3Cpath d='M7 10l4 12 5-9 5 9 4-12' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind (Play CDN: no build step needed on GitHub Pages) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Layout file -->
+  <link rel="stylesheet" href="css/layout.css">
+</head>
+
+<body class="flex min-h-screen flex-col">
+
+  <!-- Header -->
+  <header class="site-header sticky top-0 z-50 border-b border-neutral-200 bg-white/90 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between px-5 py-3 md:px-8">
+
+      <a href="#inicio" class="text-xl font-bold tracking-tight">wishpro</a>
+
+      <button id="nav-toggle"
+              type="button"
+              class="-mr-2 flex h-11 w-11 items-center justify-center rounded-full text-neutral-900 hover:bg-neutral-100 md:hidden"
+              aria-expanded="false"
+              aria-controls="site-nav"
+              aria-label="Abrir menú">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16"/>
+        </svg>
+      </button>
+
+      <nav id="site-nav" class="hidden w-full md:flex md:w-auto" aria-label="Principal">
+        <ul class="flex w-full flex-col pb-3 md:flex-row md:items-center md:gap-8 md:pb-0">
+          <li><a class="nav-link" href="#servicios">Servicios</a></li>
+          <li><a class="nav-link" href="#nosotros">Nosotros</a></li>
+          <li><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="flex flex-1 flex-col">
+
+    <!-- Hero with wallpaper -->
+    <section id="inicio" class="hero flex items-center">
+      <div class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-5 py-16 md:px-8 md:py-24">
+        <h1 class="max-w-3xl text-4xl font-bold leading-tight tracking-tight text-neutral-900 sm:text-5xl md:text-6xl">
+          Lo importante, fácil de encontrar.
+        </h1>
+        <p class="measure text-lg leading-relaxed text-neutral-600 md:text-xl">
+          Un texto breve que explique qué hace Wishpro y para quién. Cámbialo por tu propuesta en una o dos frases.
+        </p>
+        <div class="flex flex-col gap-3 sm:flex-row">
+          <a href="#contacto" class="btn btn-solid">Escríbenos</a>
+          <a href="#servicios" class="btn btn-line">Ver servicios</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="servicios" class="bg-white">
+      <div class="mx-auto flex max-w-6xl flex-col gap-10 px-5 py-16 md:px-8 md:py-24">
+        <h2 class="text-3xl font-bold tracking-tight md:text-4xl">Servicios</h2>
+
+        <div class="flex flex-col gap-10 md:flex-row md:gap-12">
+          <article class="flex flex-1 flex-col gap-3 border-t border-neutral-300 pt-5">
+            <h3 class="text-xl font-semibold">Servicio uno</h3>
+            <p class="leading-relaxed text-neutral-600">Describe en una frase qué incluye y qué resuelve para el cliente.</p>
+          </article>
+
+          <article class="flex flex-1 flex-col gap-3 border-t border-neutral-300 pt-5">
+            <h3 class="text-xl font-semibold">Servicio dos</h3>
+            <p class="leading-relaxed text-neutral-600">Describe en una frase qué incluye y qué resuelve para el cliente.</p>
+          </article>
+
+          <article class="flex flex-1 flex-col gap-3 border-t border-neutral-300 pt-5">
+            <h3 class="text-xl font-semibold">Servicio tres</h3>
+            <p class="leading-relaxed text-neutral-600">Describe en una frase qué incluye y qué resuelve para el cliente.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="nosotros" class="bg-neutral-100">
+      <div class="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-16 md:flex-row md:gap-16 md:px-8 md:py-24">
+        <h2 class="text-3xl font-bold tracking-tight md:w-1/3 md:text-4xl">Nosotros</h2>
+        <div class="flex flex-col gap-4 md:w-2/3">
+          <p class="measure text-lg leading-relaxed text-neutral-600">
+            Cuenta quién está detrás de Wishpro, cómo trabaja y por qué vale la pena escribirles.
+          </p>
+          <p class="measure leading-relaxed text-neutral-600">
+            Un segundo párrafo corto sirve para dar contexto: experiencia, forma de trabajo o lo que el cliente puede esperar.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contacto" class="bg-white">
+      <div class="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-16 md:px-8 md:py-24">
+        <h2 class="text-3xl font-bold tracking-tight md:text-4xl">Contacto</h2>
+        <p class="measure text-lg leading-relaxed text-neutral-600">
+          Cuéntanos qué necesitas y te respondemos por correo.
+        </p>
+        <div class="flex flex-col gap-3 sm:flex-row">
+          <a href="mailto:hola@wishpro.mx" class="btn btn-solid">hola@wishpro.mx</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-neutral-200 bg-neutral-50">
+    <div class="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-8 text-sm text-neutral-600 md:flex-row md:items-center md:justify-between md:px-8">
+      <p>© <span id="year">2026</span> Wishpro</p>
+      <p>wishpro.mx</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
