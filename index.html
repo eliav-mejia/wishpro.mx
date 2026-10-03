@@ -1,144 +1,134 @@
 <!DOCTYPE html>
 <html lang="es-MX">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Wishpro</title>
-  <meta name="description" content="Wishpro: una página simple, clara y rápida. Cuéntanos qué necesitas.">
-  <meta name="theme-color" content="#ffffff">
+  <title>Wishpro — Cuidado profesional, fórmulas de laboratorio</title>
+  <meta name="description" content="Wishpro: productos de cuidado personal con envase de grado médico, principios activos, fórmulas de laboratorio, libres de parabenos y no probados en animales.">
   <link rel="canonical" href="https://wishpro.mx/">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Wishpro">
-  <meta property="og:description" content="Una página simple, clara y rápida.">
-  <meta property="og:url" content="https://wishpro.mx/">
-
-  <!-- Favicon (inline, no extra file) -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23171717'/%3E%3Cpath d='M7 10l4 12 5-9 5 9 4-12' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
-
-  <!-- Font -->
+  <link rel="icon" href="assets/wallpaper.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Tailwind (Play CDN: no build step needed on GitHub Pages) -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Layout file -->
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/layout.css">
 </head>
+<body>
 
-<body class="flex min-h-screen flex-col">
-
-  <!-- Header -->
-  <header class="site-header sticky top-0 z-50 border-b border-neutral-200 bg-white/90 backdrop-blur">
-    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between px-5 py-3 md:px-8">
-
-      <a href="#inicio" class="text-xl font-bold tracking-tight">distribuidor oficial</a>
-
-      <button id="nav-toggle"
-              type="button"
-              class="-mr-2 flex h-11 w-11 items-center justify-center rounded-full text-neutral-900 hover:bg-neutral-100 md:hidden"
-              aria-expanded="false"
-              aria-controls="site-nav"
-              aria-label="Abrir menú">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-          <path d="M4 7h16M4 12h16M4 17h16"/>
-        </svg>
-      </button>
-
-      <nav id="site-nav" class="hidden w-full md:flex md:w-auto" aria-label="Principal">
-        <ul class="flex w-full flex-col pb-3 md:flex-row md:items-center md:gap-8 md:pb-0">
-          <li><a class="nav-link" href="#distribución">Distribución</a></li>
-          <li><a class="nav-link" href="#nosotros">Nosotros</a></li>
-          <li><a class="nav-link" href="#contacto">Contacto</a></li>
-        </ul>
-      </nav>
-
-    </div>
+  <header class="site-header">
+    <nav class="container nav" aria-label="Principal">
+      <a class="logo" href="index.html">wish<span>pro</span></a>
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav-links">
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main class="flex flex-1 flex-col">
-
-    <!-- Hero with wallpaper -->
-    <section id="inicio" class="hero flex items-center">
-      <div class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-5 py-16 md:px-8 md:py-24">
-        <h1 class="max-w-3xl text-4xl font-bold leading-tight tracking-tight text-neutral-900 sm:text-5xl md:text-6xl">
-          Biotecnología minimalista para tu piel.
-        </h1>
-        <p class="measure text-lg leading-relaxed text-neutral-600 md:text-xl">
-          Formulada con las exigencias del mercado europeo, nuestra línea integra activos naturales de eficacia comprobada infusionados con tecnología patentada para ofrecer resultados visibles a través de una experiencia segura, minimalista y respaldada por certificaciones internacionales libres de parabenos y crueldad animal.
-        </p>
-        <div class="flex flex-col gap-3 sm:flex-row">
-          <a href="#contacto" class="btn btn-solid">Escríbenos</a>
-          <a href="#distribución" class="btn btn-line">Ver distribución</a>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow">Cuidado profesional</span>
+        <h1>Ciencia que se siente<br>en tu piel.</h1>
+        <p class="lead">Fórmulas desarrolladas en laboratorio con principios activos, envasadas con estándares de grado médico y sin ingredientes que no necesitas.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#productos">Conoce nuestros productos</a>
+          <a class="btn btn--ghost" href="#contacto">Contáctanos</a>
         </div>
       </div>
     </section>
 
-    <!-- Services -->
-    <section id="distribución" class="bg-white">
-      <div class="mx-auto flex max-w-6xl flex-col gap-10 px-5 py-16 md:px-8 md:py-24">
-        <h2 class="text-3xl font-bold tracking-tight md:text-4xl">Distribución Oficial</h2>
+    <!-- Productos -->
+    <section class="section" id="productos">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Productos</span>
+          <h2>Lo que hace diferente a cada producto Wishpro</h2>
+          <p>Cada producto se crea bajo los mismos principios. Explora cada uno para conocer los detalles.</p>
+        </div>
 
-        <div class="flex flex-col gap-10 md:flex-row md:gap-12">
-          <article class="flex flex-1 flex-col gap-3 border-t border-neutral-300 pt-5">
-            <h3 class="text-xl font-semibold">Principios Activos</h3>
-            <p class="leading-relaxed text-neutral-600">Fórmulas de grado médico libres de parabenos y crueldad animal.</p>
-          </article>
+        <div class="grid">
+          <a class="card reveal" href="productos/envase-grado-medico.html">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2h6v4H9z"/><path d="M8 6h8l1 4v10a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V10z"/><path d="M12 12v6M9 15h6"/></svg></div>
+            <h3>Envase de grado médico</h3>
+            <p>Materiales seguros e inertes que protegen la fórmula de la luz, el aire y la contaminación.</p>
+            <span class="more">Ver más →</span>
+          </a>
 
-          <article class="flex flex-1 flex-col gap-3 border-t border-neutral-300 pt-5">
-            <h3 class="text-xl font-semibold">Aparatología</h3>
-            <p class="leading-relaxed text-neutral-600">Ingeniería patentada no invasiva diseñada para la infusión de principios activos.</p>
-          </article>
+          <a class="card reveal" href="productos/principios-activos.html">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="12" cy="20" r="2"/><path d="M6.6 7.2 9.6 10.4M17.4 7.2l-3 3.2M12 15v3"/></svg></div>
+            <h3>Principios activos</h3>
+            <p>Ingredientes con función específica, en concentraciones pensadas para resultados reales.</p>
+            <span class="more">Ver más →</span>
+          </a>
 
-          <article class="flex flex-1 flex-col gap-3 border-t border-neutral-300 pt-5">
-            <h3 class="text-xl font-semibold">Directorio</h3>
-            <p class="leading-relaxed text-neutral-600">Accede a nuestra red oficial de tiendas autorizadas y profesionales de la salud.</p>
-          </article>
+          <a class="card reveal" href="productos/formulas-de-laboratorio.html">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2h6M10 2v6L4.5 18.5A2 2 0 0 0 6.3 21h11.4a2 2 0 0 0 1.8-2.5L14 8V2"/><path d="M7 15h10"/></svg></div>
+            <h3>Fórmulas de laboratorio</h3>
+            <p>Desarrolladas y probadas por químicos formuladores con control de calidad en cada lote.</p>
+            <span class="more">Ver más →</span>
+          </a>
+
+          <a class="card reveal" href="productos/no-probado-en-animales.html">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg></div>
+            <h3>No probado en animales</h3>
+            <p>Ningún producto ni ingrediente final se prueba en animales. Belleza con conciencia.</p>
+            <span class="more">Ver más →</span>
+          </a>
+
+          <a class="card reveal" href="productos/libre-de-parabenos.html">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m5.6 5.6 12.8 12.8"/></svg></div>
+            <h3>Libre de parabenos</h3>
+            <p>Sistemas conservadores alternativos que mantienen el producto seguro sin parabenos.</p>
+            <span class="more">Ver más →</span>
+          </a>
+
+          <a class="card reveal" href="productos/dermatologicamente-probado.html">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></div>
+            <h3>Dermatológicamente probado</h3>
+            <p>Pruebas de tolerancia en piel humana, bajo supervisión de especialistas.</p>
+            <span class="more">Ver más →</span>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- About -->
-    <section id="nosotros" class="bg-neutral-100">
-      <div class="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-16 md:flex-row md:gap-16 md:px-8 md:py-24">
-        <h2 class="text-3xl font-bold tracking-tight md:w-1/3 md:text-4xl">Nosotros</h2>
-        <div class="flex flex-col gap-4 md:w-2/3">
-          <p class="measure text-lg leading-relaxed text-neutral-600">
-           Innovación europea en cuidado cutáneo: sencillez, máxima seguridad y activos de alta pureza.
-          </p>
-          <p class="measure leading-relaxed text-neutral-600">
-            Somos distribuidores de tecnología dermatológica de vanguardia y fórmulas cosméticas avanzadas con principios activos de última generación. Conectamos a profesionales y clínicas con las tendencias más destacadas e innovadoras del mercado europeo, seleccionando minuciosamente productos de importación que combinan la máxima calidad en sus ingredientes con protocolos sencillos, eficaces y rigurosamente seguros.
-          </p>
+    <!-- Nosotros -->
+    <section class="section section--alt" id="nosotros">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Nosotros</span>
+          <h2>Hecho en México, con estándares profesionales</h2>
+          <p>En Wishpro creemos que el cuidado personal debe ser transparente. Por eso explicamos qué contiene cada producto, cómo se fabrica y por qué elegimos cada material.</p>
+        </div>
+        <div class="stats reveal">
+          <div class="stat"><b>100%</b><span>Libre de crueldad animal</span></div>
+          <div class="stat"><b>0</b><span>Parabenos en nuestras fórmulas</span></div>
+          <div class="stat"><b>Lote a lote</b><span>Control de calidad y trazabilidad</span></div>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contacto" class="bg-white">
-      <div class="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-16 md:px-8 md:py-24">
-        <h2 class="text-3xl font-bold tracking-tight md:text-4xl">Contacto</h2>
-        <p class="measure text-lg leading-relaxed text-neutral-600">
-          Cuéntanos qué necesitas y te respondemos por correo.
-        </p>
-        <div class="flex flex-col gap-3 sm:flex-row">
-          <a href="mailto:hola@wishpro.mx" class="btn btn-solid">hola@wishpro.mx</a>
+    <!-- Contacto -->
+    <section class="section" id="contacto">
+      <div class="container">
+        <div class="cta reveal">
+          <h2>¿Tienes preguntas sobre un producto?</h2>
+          <p>Escríbenos y te ayudamos a elegir lo que mejor va con tu piel.</p>
+          <a class="btn" href="mailto:hola@wishpro.mx">hola@wishpro.mx</a>
         </div>
       </div>
     </section>
-
   </main>
 
-  <!-- Footer -->
-  <footer class="border-t border-neutral-200 bg-neutral-50">
-    <div class="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-8 text-sm text-neutral-600 md:flex-row md:items-center md:justify-between md:px-8">
-      <p>© <span id="year">2026</span> Wishpro</p>
-      <p>wishpro.mx</p>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="logo" href="index.html">wish<span>pro</span></a>
+      <span>© <span data-year>2026</span> Wishpro México. Todos los derechos reservados.</span>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
