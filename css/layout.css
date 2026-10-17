@@ -368,3 +368,6 @@ a.card:hover {
   .stats { grid-template-columns: 1fr; }
   .cta { padding: 48px 24px; }
 }
+
+/* Visually hidden, still read by screen readers and search engines (keeps the heading outline in order) */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }

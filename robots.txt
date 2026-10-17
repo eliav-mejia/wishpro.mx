@@ -1,0 +1,5 @@
+# Wishpro — https://wishpro.mx/robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://wishpro.mx/sitemap.xml
