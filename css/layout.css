@@ -205,6 +205,8 @@ a.card:hover {
   border-color: transparent;
 }
 .card h3 { margin-top: 18px; }
+.card .eyebrow { margin: 18px 0 0; }
+.card .eyebrow + h3 { margin-top: .3em; }
 .card p { font-size: .95rem; flex: 1; }
 .card .more {
   font-size: .9rem;
