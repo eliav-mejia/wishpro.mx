@@ -1,0 +1,11 @@
+# Documentación interna: nunca en el repositorio ni en el sitio.
+_interno/
+
+# Configuración local del editor / agente
+.claude/
+
+# Secretos (si algún día hay formularios, pagos o API). Ninguno entra al repositorio.
+.env
+.env.*
+*.pem
+*.key
