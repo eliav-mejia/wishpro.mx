@@ -96,6 +96,9 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 }
 .logo:hover { text-decoration: none; }
 .logo span { color: var(--accent); }
+.logo { display: inline-flex; align-items: center; }
+.logo img { display: block; height: 32px; width: auto; }
+.site-footer .logo img { height: 26px; }
 
 .nav-links {
   display: flex;

@@ -37,7 +37,7 @@ una búsqueda concreta de quien compara productos.
 | Portada | website | summary | `Organization` (Wishpro México, email, país) + `WebSite` |
 | `/productos/` y cada estándar | website | summary | `BreadcrumbList` |
 
-Comunes: `og:site_name` = Wishpro, `og:locale` = es_MX. No hay `og:image` porque el sitio no tiene imágenes.
+Comunes: `og:site_name` = Wishpro, `og:locale` = es_MX. No hay `og:image` todavía; la única imagen es el logo (`images/wishpro-logo.png`, cabecera y pie, `alt="Wishpro"`).
 
 ## Archivos de rastreo
 
